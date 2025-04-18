@@ -4,10 +4,9 @@ const {checkAndPostUpdate} = require('../utils/checkAndUpdate');
 
 const loader = () => {
   //Set up Scheduler
-  checkAndPostUpdate();
-//   cron.schedule("0 23 * * *", () => {
-//     checkAndPostUpdate();
-//   });
+  cron.schedule("0 23 * * *", () => {
+    checkAndPostUpdate();
+  });
 };
 
 module.exports = loader
