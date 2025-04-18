@@ -1,0 +1,26 @@
+{
+  "name": "channel-bot",
+  "version": "1.0.0",
+  "description": "A bot to give daily subscriber amount and the streak for how many days it has been at that amount (more features will be added soon)",
+  "keywords": [
+    "bot",
+    "telegram",
+    "summary",
+    "fun"
+  ],
+  "license": "ISC",
+  "author": "Henok Yoseph",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "node index.js"
+  },
+  "dependencies": {
+    "axios": "^1.8.4",
+    "body-parser": "^2.2.0",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "node-cron": "^3.0.3"
+  }
+}
