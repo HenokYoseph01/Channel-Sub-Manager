@@ -8,9 +8,15 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 const loader = () => {
+  console.log("HI")
   //Set up Scheduler
-  cron.schedule("1-5 * * * *", () => {
+  cron.schedule("* * * * *", () => {
+    console.log("HIT CRON")
     checkAndPostUpdate();
+  });
+
+  app.get('/', (req, res) => {
+  res.send('Bot is live!');
   });
 
   app.listen(PORT, ()=>{
