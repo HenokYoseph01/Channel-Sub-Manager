@@ -24,14 +24,14 @@ async function checkAndPostUpdate(){
 
     if(newCount === streakData.currentCount){
         streakData.streakDays += 1;
-        message = `${newCount} subs streak 🔥 continues for ${streakData.streakDays} day${streakData.streakDays > 1 ? "s" : ""}💪.`;
+        message = `CHANNEL MANAGER BOT HERE🫡: ${newCount} subs streak 🔥 continues for ${streakData.streakDays} day${streakData.streakDays > 1 ? "s" : ""}💪.`;
     }
     else{
         //if statement here to see if subs went up (yay) or subs went down (nay)
         const subEmoji = newCount > streakData.currentCount? '🗿':'💀' 
         const streakEmoji = newCount > streakData.currentCount? '😎':'😔' 
 
-        message = `${streakData.currentCount} subs streak broken ${subEmoji}. ${newCount} subs streak started for 0 days ${streakEmoji}.`;
+        message = `CHANNEL MANAGER BOT HERE🫡: ${streakData.currentCount} subs streak broken ${subEmoji}. ${newCount} subs streak started for 0 days ${streakEmoji}.`;
         streakData.currentCount = newCount
         streakData.streakDays = 0
     }
