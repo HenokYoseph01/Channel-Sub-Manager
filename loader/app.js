@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3000;
 
 const loader = () => {
   //Set up Scheduler
-  cron.schedule("0 23 * * *", () => {
+  cron.schedule("1-5 * * * *", () => {
     checkAndPostUpdate();
   });
 
