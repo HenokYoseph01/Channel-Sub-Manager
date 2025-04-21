@@ -8,9 +8,8 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 const loader = () => {
-  console.log("HI")
   //Set up Scheduler
-  cron.schedule("0 9 * * *", () => {
+  cron.schedule("0 23 * * *", () => {
     checkAndPostUpdate();
   },
   {
