@@ -10,9 +10,13 @@ const PORT = process.env.PORT || 3000;
 const loader = () => {
   console.log("HI")
   //Set up Scheduler
-  cron.schedule("0 23 * * *", () => {
+  cron.schedule("0 9 * * *", () => {
     checkAndPostUpdate();
-  });
+  },
+  {
+    timezone:'Africa/Addis_Ababa'
+  }
+);
 
   app.get('/', (req, res) => {
   res.send('Bot is live!');
