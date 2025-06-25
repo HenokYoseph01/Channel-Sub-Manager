@@ -18,9 +18,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run Telegram bot script
+      - name: Run bot
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           CHANNEL_NAME: ${{ secrets.CHANNEL_NAME }}
-        run: |
-          node bot.js
+        run: node bot.js  # ✅ adjust this if your file is in a folder
