@@ -11,7 +11,7 @@ const loader = () => {
   //Set up Scheduler
   // cron.schedule("11 9 * * *", () => {
   cron.schedule(
-    "*/10 * * * *",
+    "*/30  * * * *",
     () => {
       checkAndPostUpdate();
     },
