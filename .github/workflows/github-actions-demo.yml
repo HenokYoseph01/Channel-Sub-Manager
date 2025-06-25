@@ -1,19 +1,16 @@
-name: Deploy Telegram Bot
+name: Run Telegram Bot
 
-on:
-  push:
-    branches: [main]
+on: [workflow_dispatch]
 
 jobs:
-  deploy:
+  run-bot:
     runs-on: ubuntu-latest
-    environment: production
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
@@ -21,10 +18,9 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run Telegram Bot
+      - name: Run Telegram bot script
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           CHANNEL_NAME: ${{ secrets.CHANNEL_NAME }}
         run: |
-          echo "Starting Telegram bot..."
-          node bot.js  # Or whatever file starts your bot
+          node bot.js
